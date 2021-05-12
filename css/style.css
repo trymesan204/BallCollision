@@ -1,0 +1,12 @@
+.box{
+    width: 600px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+    position: relative;
+    background-color: aqua;
+}
+
+body{
+    background-color: aquamarine;
+}
