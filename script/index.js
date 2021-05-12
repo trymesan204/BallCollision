@@ -36,19 +36,38 @@ function move(ballObj){
 }
 
 var balls = [
-    { x: 200, y: 300, color: 'red'},
-    { x: 400, y: 300, color: 'yellow'},
-    { x: 290, y: 100, color: 'green'},
-    { x: 500, y: 200, color: 'blue'},
-    { x: 550, y: 300, color: 'grey'},
-    { x: 190, y: 150, color: 'orange'},
-    { x: 350, y: 250, color: 'black'},
-    { x: 230, y: 110, color: 'purple'},
-    { x: 110, y: 220, color: 'pink'},
-    { x: 260, y: 250, color: 'indigo'},
-    { x: 310, y: 270, color: 'violet'},
-    { x: 500, y: 310, color: 'lightblue'},
+    //{ x: 200, y: 300, color: 'red'},
+    //{ x: 400, y: 300, color: 'yellow'},
+    //{ x: 290, y: 100, color: 'green'},
+    //{ x: 500, y: 200, color: 'blue'},
+    //{ x: 550, y: 300, color: 'grey'},
+    //{ x: 190, y: 150, color: 'orange'},
+    //{ x: 350, y: 250, color: 'black'},
+    //{ x: 230, y: 110, color: 'purple'},
+    //{ x: 110, y: 220, color: 'pink'},
+    //{ x: 260, y: 250, color: 'indigo'},
+    //{ x: 310, y: 270, color: 'violet'},
+    //{ x: 500, y: 310, color: 'lightblue'},
 ]
+
+function selectBall(){
+    for ( var i = 0; i < 10; i++){
+        var x = parseInt(Math.random() * 600 );
+        var y = parseInt(Math.random() * 400 );
+        var r = parseInt(Math.random() * 255);
+        var g = parseInt(Math.random() * 255);
+        var b = parseInt(Math.random() * 255);
+        var temp = {};
+        temp.x = x;
+        temp.y = y;
+        temp.color = 'rgb('+r+','+g+','+b+')';
+        balls.push(temp);
+        console.log(balls);
+    }
+}
+
+selectBall();
+
 
 var box = document.getElementById('box');
 var allBalls = [];
